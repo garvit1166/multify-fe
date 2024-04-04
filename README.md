@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# Log Watcher
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Log Watcher](/) This application implements a real-time log watching solution using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It allows users to monitor a log file hosted on a remote machine and view updates as they occur without needing to refresh the page
 
-## Available Scripts
+<Br/>
 
-In the project directory, you can run:
+# Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Components](#components)
+- [Technologies Used](#tech-stack)
+- [Installation](#setup)
+- [Usage](#usage)
+- [Optimization](#optimization)
+- [Working Model Screenshots]()
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<a id="features"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Features
+- Real-time streaming of log file updates.
+- Accessible via a web-based client.
+- Automatically updates with new log entries without page refresh.
+- Optimized for large log files.
+- Handles multiple clients simultaneously.
 
-### `npm test`
+<a id="components"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Components
 
-### `npm run build`
+### Server-side Program:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Monitors the specified log file.
+- Streams updates to connected clients.
+- Implemented using Node.js with Express.js.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Web-based Client:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Displays log file updates in real-time.
+- Shows the last 10 lines upon initial load.
+- Continuously updates with new log entries.
+- Implemented using React.js.
 
-### `npm run eject`
+<a id="tech-stack"></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- ReactJs
+- NodeJs
+- ExpressJs
+- MongoDB
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ### *Libraries Used*
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- WebSocket (for real-time communication)
+- React Router (for client-side routing)
+- Bootstrap (for UI components)
+- Axios (for making HTTP requests)
 
-## Learn More
+<a id="setup"></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Project Setup Guide
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Frontend
 
-### Code Splitting
+1. Clone multyfi-fe repo and install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   sh
+   git clone https://github.com/garvit1166/multyfi-fe
+   npm i
+   
 
-### Analyzing the Bundle Size
+2. Make .env file
+    sh
+    REACT_APP_BASE_URL=http://localhost:8080
+    REACT_APP_SOCKET_URL=ws://localhost:8080
+    
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Start the react app
 
-### Making a Progressive Web App
+   sh
+   npm start
+   
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Backend
 
-### Advanced Configuration
+1. Clone multyfi-be repo and install dependencies
+   sh
+   git clone https://github.com/garvit1166/multyfi-be
+   npm i
+   
+2. Start the backend server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   sh
+   npm start
+   
+<a id="usage"></a>
 
-### Deployment
+# Usage:
+1. Upon accessing the application, the web client will display the last 10 lines of the log file.
+2. As new log entries are appended to the file, they will automatically appear in the client interface without needing to refresh the page.
+3. Multiple clients can access the application simultaneously, and all will receive real-time updates.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<a id="optimization"></a>
 
-### `npm run build` fails to minify
+# Optimization:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To optimize for large log files:
+
+- The server retrieves and streams only the updates to the clients, rather than transmitting the entire file each time.
+- Initial loading of the last 10 lines is optimized for performance.
+
+<a id="working-model-ss"></a>
+
+# Working Model Screenshots
