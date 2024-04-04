@@ -17,7 +17,7 @@ function SideNav({ showSideNav, setShowSideNav, isSmallScreen }) {
         <div className="sidenavPanel d-flex h-100 text-white flex-column p-3 position-relative">
           <div className=" sidenavHeading mx-auto mt-4 h3 text-center">
             <p className={`fs-5 ms-2 ${showSideNav ? 'd-inline' : 'd-none'}`}>
-              Multify
+              Multyfi
             </p>
           </div>
           <hr />
