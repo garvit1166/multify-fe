@@ -10,10 +10,11 @@ const LogSection = () => {
 
   const fetchData = async () => {
     const res = await fetchInitalLogData();
-    setLogs(res);
+    console.log(res);
+    setLogs(res.lastLines);
   };
   useEffect(() => {
-    // fetchData()
+    fetchData()
   }, []);
 
   //   const { lastMessage } = useWebSocket(WS_URL, {
@@ -30,15 +31,15 @@ const LogSection = () => {
   //   }, [lastMessage]);
   return (
     <div
-      className={`d-flex flex-column w-100 h-100 logSection rounded p-2`}
+      className={`d-flex flex-column w-100 h-100 logSection rounded p-2 text-start`}
       style={{ overflowY: 'auto' }}
     >
       {logs && logs.length > 1 ? (
         logs.map((log, index) => <p key={index}>{log}</p>)
       ) : (
-        <div class="d-flex justify-content-center align-items-center h-100">
-          <div class="spinner-border" role="status">
-            <span class="visually-hidden">Loading...</span>
+        <div className="d-flex justify-content-center align-items-center h-100">
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         </div>
       )}
