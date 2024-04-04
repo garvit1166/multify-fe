@@ -11,7 +11,7 @@ function Home() {
       <div>
         <InfoBar heading={'LOG INFO'} />
       </div>
-      <div className="text-white p-4 position-relative h-100">
+      <div className="text-white p-4 position-relative h-86">
         <LogSection />
       </div>
     </div>
