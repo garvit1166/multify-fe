@@ -1,0 +1,17 @@
+.infoHeading {
+  letter-spacing: 0.1rem;
+}
+.infoBar {
+  background: rgb(106, 168, 110);
+  background: -webkit-linear-gradient(to right, #3a7bd5, #3a6073); 
+  background: linear-gradient(to right, #3a7bd5, #3a6073);
+  padding-bottom: 2% !important ;
+}
+
+@media (max-width: 767px) {
+  .infoBar {
+    background-color: transparent !important;
+    background: none;
+    padding-bottom: 3% !important;
+  }
+}
