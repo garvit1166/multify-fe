@@ -115,5 +115,18 @@ To optimize for large log files:
 
 ![image](https://github.com/garvit1166/multyfi-fe/assets/92694655/f0d0646d-b4ea-406b-b8ef-ead03e6f78a0)
 
+(This Add Log Button is for DEMO purpose only).
+
 ![image](https://github.com/garvit1166/multyfi-fe/assets/92694655/a79155bf-9471-4525-a11e-405478e14f34)
+
+# Working Model Vedio Demonstration
+
+
+
+
+https://github.com/garvit1166/multyfi-fe/assets/92694655/54374b77-9da2-46a8-ae9d-394d25640871
+
+
+
+https://github.com/garvit1166/multyfi-fe/assets/92694655/5468b8cd-8f48-4478-b4a7-08785d5b1361
 
